@@ -78,7 +78,7 @@ fs.copyFile("file.txt","./copy/copyfile.text", function(err){
 
 ////---------------------------------------------------------------------------------------------------------------------
 
-///// For creating folder
+///// For deleting folder
 // //fs.rmdir(path[, options], callback) ===:> delete the empty folder
 
 fs.rmdir("./copy",function(err){
@@ -119,10 +119,23 @@ fs.readdir("lolo",{writeFile: true}, function(err, files){
         else console.log(files)
 })
 
-
 ///this well give filr type wehter it  file ot folder
 
 ///dirent {name: 'guilly', path: 'lolo', [symbol(type)]: 1 },  --------file
 ///dirent {name: 'hello', path: 'lolo', [symbol(type)]: 2 },  --------this folder
 ///dirent {name: 'polo.txt', path: 'lolo', [symbol(type)]: 2 }, --------this folder
 ///dirent {name: 'somedata.txt', path: 'lolo', [symbol(type)]: 1 }, --------this file
+
+///----------------------------------------------------------------------------------------------------------------------------------------------
+
+
+/////synchronous Api in node.js blocking vs non-blocking code
+
+///// For creating a filr using sync
+// // fs.writeFileSync(file,data[,option]) ---there is no callback in sync
+
+
+fs.writeFileSync("hey.txt","whatever");
+console.log("created")
+
+/// this create a file with name hey .txt
