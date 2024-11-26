@@ -5,6 +5,7 @@ app.set('view engine', 'ejs');
 
 
 //this well decode the json data or data coming from axios example
+//this well support all framework and library
 app.use(express.json());
 
 //this well support "all data of forms"(google forms, all the form are useing get and post method)
